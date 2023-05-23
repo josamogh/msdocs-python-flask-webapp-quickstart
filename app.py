@@ -6,17 +6,17 @@ from flask import (Flask, redirect, render_template, request,
 app = Flask(__name__)
 
 
-@app.route('https://sample273.azurewebsites.net/')
+@app.route('sample273.azurewebsites.net/')
 def index():
    print('Request for index page received')
    return render_template('index.html')
 
-@app.route('/favicon.ico')
+@app.route('sample273.azurewebsites.net/'/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-@app.route('https://sample273.azurewebsites.net/hello', methods=['POST'])
+@app.route('sample273.azurewebsites.net/hello', methods=['POST'])
 def hello():
    name = request.form.get('name')
 
