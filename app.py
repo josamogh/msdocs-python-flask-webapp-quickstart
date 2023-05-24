@@ -11,7 +11,7 @@ def index():
    print('Request for index page received')
    return render_template('index.html')
 
-@app.route('sample273.azurewebsites.net/'/favicon.ico')
+@app.route('sample273.azurewebsites.net/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
